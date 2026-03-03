@@ -100,6 +100,76 @@ export const products: Product[] = [
         image: "https://www.tastingtable.com/img/gallery/queso-panela-is-the-mexican-cheese-that-softens-nicely-when-baked/l-intro-1684093858.jpg",
         description: "El queso Bagaces, conocido en Costa Rica como queso seco, es un producto artesanal que se elabora con leche recién ordeñada, a veces incluso leche fermentada o nata.",
         origin: "Italia"
+    },
+    {
+        id: 11,
+        name: "Cuajada",
+        category: "fresco",
+        price: 1500.00,
+        unit: "kg",
+        image: "https://quesodestrabilla.es/wp-content/uploads/como-es-el-proceso-de-la-cuajada-1.webp",
+        description: "La cuajada es un producto lácteo de textura cremosa y gelatinosa, elaborado con leche cruda coagulada por acción del cuajo. Las primeras cuajadas datan desde la antigüedad y se han utilizado en la gastronomía del norte de España y en algunas regiones de Latinoamérica.",
+        origin: "Italia"
+    },
+    {
+        id: 12,
+        name: "Natilla",
+        category: "crema",
+        price: 1500.00,
+        unit: "kg",
+        image: "https://i0.wp.com/pantreze.com/wp-content/uploads/2022/08/10-best-pudding-recipes-03.jpg?w=800&ssl=1",
+        description: "La natilla es un postre lácteo muy extendido en la gastronomía española. Se trata de una crema elaborada con leche, yemas de huevo, azúcar y aromas como la vainilla o el limón. Aunque se desconoce el origen exacto de las natillas, generalmente se sitúa su nacimiento en los conventos a lo largo de Europa.",
+        origin: "Italia"
+    },
+    {
+        id: 13,
+        name: "Leche Agria",
+        category: "fresco",
+        price: 1600.00,
+        unit: "kg",
+        image: "https://tse2.mm.bing.net/th/id/OIP.6rL83MamkPQh7nQaFDOOyAHaFG?w=1280&h=881&rs=1&pid=ImgDetMain&o=7&rm=3",
+        description: "La leche agria es un lácteo preparado mediante la fermentación de una bacteria lactobacillus. Este producto se emplea igual que el yogur para ser servido en el desayuno junto con cereales, muesli o copos de maíz. ",
+        origin: "Italia"
+    },
+    {
+        id: 14,
+        name: "Tortillas",
+        category: "arina",
+        price: 1200.00,
+        unit: "ud",
+        image: "https://www.mexicohistorico.com/img/The-History-of-Mexican-Tortillas--Corn--Flour--and-Tradition.webp",
+        description: "Una tortilla de maíz es un tipo de pan plano elaborado con masa de maíz nixtamalizado y cocida en un comal.",
+        origin: "C.A."
+    },
+    {
+        id: 15,
+        name: "Tamal Asado",
+        category: "arina",
+        price: 4000.00,
+        unit: "kg",
+        image: "https://boondockingrecipes.com/wp-content/uploads/2024/12/20.-Costa-Rican-Tamal-Asado-Recipes-1.jpg",
+        description: "El tamal asado es un platillo tradicional costarricense que se caracteriza por su masa de maíz cocida envuelta en hojas de plátano. Este platillo se prepara en una olla forrada con hojas de plátano y se cocina en un horno de barro o sobre un fogón.",
+        origin: "C.A."
+    },
+    {
+        id: 16,
+        name: "Queso Parmesano",
+        category: "fresco",
+        price: 17000.00,
+        unit: "kg",
+        image: "https://tse1.mm.bing.net/th/id/OIP.IyoJQnMh_OOE9iEb-qhjTAHaE5?rs=1&pid=ImgDetMain&o=7&rm=3",
+        description: "El parmesano, conocido como Parmigiano Reggiano en italiano, es un queso duro italiano de granulosa y grasa, producido en la llanura de Padana, probablemente por monjes en el siglo XII o XIII.",
+        origin: "Italia"
+    },
+    {
+        id: 17,
+        name: "Queso Buffalo",
+        category: "fresco",
+        price: 7500.00,
+        unit: "kg",
+        image: "https://th.bing.com/th/id/R.ac8f1892fd07ff15fb72d36980543485?rik=zmeB9zprYN%2bXdA&riu=http%3a%2f%2fspanishfinecheese.com%2fwp-content%2fuploads%2f2018%2f06%2fbufala-blau-13-1024x683.jpg&ehk=rntt09bdq1nB6HcLHTYXDF9zVa1ijg1Xfw%2bf0kfQxKE%3d&risl=&pid=ImgRaw&r=0",
+        description: "El  queso buffalo es un producto lácteo de origen italiano que se elabora a partir de la leche de búfala. A diferencia de la leche de vaca, la leche de búfala tiene características únicas que le confieren a este queso un sabor y una textura distintiva.",
+        origin: "Italia"
     }
 ];
 
@@ -109,4 +179,5 @@ export const filters = [
     { id: 'fresco', label: 'Frescos' },
     { id: 'azul', label: 'Azules' },
     { id: 'crema', label: 'Cremas' },
+    { id: 'arina', label: 'Arinas' },
 ];

@@ -15,14 +15,11 @@ export default function Home() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // Añadimos weightLabel y multiplier
+  // Función existente para agregar al carrito
   const addToCart = (product: Product, weightLabel: string, multiplier: number) => {
     const calculatedPrice = product.price * multiplier;
-
     setCartItems(prev => {
-      // Buscamos si ya existe el producto CON EL MISMO PESO
       const existing = prev.find(item => item.id === product.id && item.selectedWeight === weightLabel);
-
       if (existing) {
         return prev.map(item =>
           item.id === product.id && item.selectedWeight === weightLabel
@@ -30,8 +27,6 @@ export default function Home() {
             : item
         );
       }
-
-      // Si no existe, creamos el nuevo item con los datos de peso
       return [...prev, {
         ...product,
         quantity: 1,
@@ -42,9 +37,9 @@ export default function Home() {
     });
   };
 
+  // Función existente para actualizar cantidad
   const updateQuantity = (id: number, change: number, weightLabel: string) => {
     setCartItems(prev => prev.map(item => {
-      // Solo modificamos si coincide ID y PESO
       if (item.id === id && item.selectedWeight === weightLabel) {
         const newQuantity = item.quantity + change;
         return newQuantity > 0 ? { ...item, quantity: newQuantity } : item;
@@ -53,8 +48,14 @@ export default function Home() {
     }).filter(item => item.quantity > 0));
   };
 
+  // Función existente para eliminar
   const removeFromCart = (id: number, weightLabel: string) => {
     setCartItems(prev => prev.filter(item => !(item.id === id && item.selectedWeight === weightLabel)));
+  };
+
+  // 👇 NUEVA FUNCIÓN PARA VACIAR EL CARRITO
+  const clearCart = () => {
+    setCartItems([]);
   };
 
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
@@ -67,16 +68,17 @@ export default function Home() {
       />
       <Hero />
       <Stats />
-      {/* Pasamos la función actualizada */}
       <Products onAddToCart={addToCart} />
       <Features />
 
+      {/* 👇 AQUÍ DEBES AGREGAR onClearCart={clearCart} */}
       <Cart
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}
         items={cartItems}
         onUpdateQuantity={updateQuantity}
         onRemove={removeFromCart}
+        onClearCart={clearCart}
       />
     </main>
   );
