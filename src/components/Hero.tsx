@@ -29,18 +29,17 @@ export default function Hero() {
                             Descubre nuestra selección de quesos artesanales y productos lácteos premium.
                             Tradición, calidad y sabor en cada bocado.
                         </p>
-                        <div className="flex flex-wrap gap-4">
+                        <div className="flex gap-4 w-full">
                             <button
                                 onClick={scrollToProducts}
-                                className="px-8 py-4 bg-charcoal text-white rounded-full font-medium hover:bg-charcoal-light transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                className="flex-1 text-center px-6 py-4 bg-charcoal text-white rounded-full font-medium hover:bg-charcoal-light transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
                             >
                                 Ver Catálogo
                             </button>
 
-                            {/* BOTÓN MODIFICADO */}
                             <Link
                                 href="/historia"
-                                className="px-8 py-4 border-2 border-charcoal text-charcoal rounded-full font-medium hover:bg-charcoal hover:text-white transition-all"
+                                className="flex-1 text-center px-6 py-4 border-2 border-charcoal text-charcoal rounded-full font-medium hover:bg-charcoal hover:text-white transition-all"
                             >
                                 Conoce Más
                             </Link>
