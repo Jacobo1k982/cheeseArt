@@ -14,7 +14,7 @@ interface CartProps {
 }
 
 // 👇 CAMBIA ESTE NÚMERO POR EL TUYO
-const WHATSAPP_NUMBER = "50612345678";
+const WHATSAPP_NUMBER = "50664541700";
 
 export default function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemove }: CartProps) {
     // Estados para el método de entrega
